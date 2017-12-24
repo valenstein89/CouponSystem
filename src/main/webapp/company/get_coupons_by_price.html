@@ -1,0 +1,38 @@
+<div class="w3-container w3-light-grey">
+		<h1>Coupons of the Company under Price:</h1>
+</div>
+
+<form ng-submit="getByPriceCtrl.getByPrice()">
+    <input type="number" ng-model="getByPriceCtrl.price" step="0.01" min="0" required>
+    <input type="submit" value="Get Coupons">
+</form>
+
+<div ng-show="getByPriceCtrl.showCoupons">
+    <table border="1" style="margin-left:2%; margin-top:2%">
+        <tr>
+            <th>ID</th>
+            <th>Title</th>
+            <th>Type</th>
+            <th>Price</th>
+            <th>Amount</th>
+            <th>Start Date</th>
+            <th>Expires</th>
+            <th>Message</th>
+            <th>Image</th>
+        </tr>
+        
+        <tr ng-repeat="c in getByPriceCtrl.coupons">
+                <td>{{c.ID}}</td>
+                <td>{{c.title}}</td>
+                <td>{{c.type}}</td>
+                <td>{{c.price}}</td>
+                <td>{{c.amount}}</td>
+                <td>{{c.startDate}}</td>
+                <td>{{c.endDate}}</td>
+                <td>{{c.message}}</td>
+                <td>{{c.image}}</td>
+        </tr>
+    </table>
+</div>
+
+<p>{{getByPriceCtrl.message}}</p>

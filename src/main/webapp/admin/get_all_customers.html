@@ -1,0 +1,16 @@
+<div class="w3-container w3-light-grey">
+    <h1>All Customers:</h1>
+</div>
+<div ng-show="getAllCustCtrl.showTable">
+    <table border="1" style="margin-left:2%; margin-top:2%">
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+        </tr>
+        <tr ng-repeat="customer in getAllCustCtrl.customers">
+            <td>{{customer.ID}}</td>
+            <td>{{customer.custName}}</td>
+        </tr>
+    </table>
+</div>
+<p>{{getAllCustCtrl.message}}</p>

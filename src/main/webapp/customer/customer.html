@@ -1,0 +1,46 @@
+<html ng-app="customerApp">
+	<head>
+		<script src="angular.js"></script>
+		<script src="angular-ui-router.js"></script>
+		<script src="bootstrap.js"></script>
+		<script src="customer.srvc.js"></script>
+		<script src="route.config.js"></script>
+		<script src="get.all.coupons.ctrl.js"></script>
+		<script src="get.by.type.ctrl.js"></script>
+		<script src="get.by.price.ctrl.js"></script>
+		<script src="purchase.ctrl.js"></script>
+
+		<title>Customer Page</title>
+
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+		<meta charset="utf-8"/>
+	</head>
+	<body>
+		<!-- Sidebar -->
+		<div class="w3-sidebar w3-light-blue w3-bar-block" style="width:15%">
+		
+			<h3 class="w3-bar-item">Menu</h3>
+			
+			<a href="#/getAllCoupons" class="w3-bar-item w3-button">Get All Coupons</a>
+            <a href="#/purchaseCoupon" class="w3-bar-item w3-button">Purchase Coupon</a>
+			<a href="#/getCouponsByType" class="w3-bar-item w3-button">Get Coupons By Type</a>
+            <a href="#/getCouponsByPrice" class="w3-bar-item w3-button">Get Coupons Under Price</a>
+			<br>
+			<a href="http://localhost:8080/CouponSystemWebAPI/logout" class="w3-bar-item w3-button">Log Out</a>
+		
+		</div>
+		
+		<!-- Page Content -->
+		<div style="margin-left:15%">
+		
+			<div class="w3-container w3-blue">
+				<h1>Welcome Customer</h1>
+			</div>
+
+			<div ui-view></div>
+			
+		</div>
+	</body>
+</html>

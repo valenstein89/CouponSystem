@@ -1,0 +1,9 @@
+<div class="w3-container w3-light-grey">
+		<h1>Purchase Coupons by ID:</h1>
+</div>
+
+<form ng-submit="purchaseCtrl.purchase()">
+    <input type="number" ng-model="purchaseCtrl.id" min="1" required>
+    <input type="submit" value="Purchase">
+</form>
+<p>{{purchaseCtrl.message}}</p>

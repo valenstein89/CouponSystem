@@ -1,0 +1,43 @@
+<div class="w3-container w3-light-grey">
+    <h1>Company by ID #{{getCompCtrl.company.ID}}:</h1>
+</div>
+
+<form ng-submit="getCompCtrl.showEdit = false; getCompCtrl.getCompany()">
+    <input type="number" ng-model="getCompCtrl.id" placeholder="Insert company ID" min="1" required/>
+    <input type="submit" value="Get Company"/>
+</form>
+
+<div>
+    <div ng-show="getCompCtrl.showTable">
+	    <table>
+	        <tr>
+	            <th align="left">Company Name: </th>
+	            <td>{{getCompCtrl.company.compName}}</td>
+	        </tr>
+	        <tr>
+	            <th align="left">Email: </th>
+	            <td>{{getCompCtrl.company.email}}</td>
+	        </tr>
+	        <tr>
+	            <th align="left">Password: </th>
+	            <td>{{getCompCtrl.company.password}}</td>
+	        </tr>
+	    </table>
+
+	    <button ng-click="getCompCtrl.showEdit = true; getCompCtrl.showTable = false">EDIT</button>
+	    <button ng-click="getCompCtrl.deleteCompany()">Delete</button>  <span>{{getCompCtrl.deleteMessage}}</span>
+    </div>
+
+    <div ng-show="getCompCtrl.showEdit">
+        <form ng-submit="getCompCtrl.updateCompany()" style="margin-left:2%; margin-top:2%">
+            Name:<br>
+            <span style="color:grey" margin="0" padding="0">{{getCompCtrl.company.compName}}</span><br>
+            Email:<br>
+            <input type="text" ng-model="getCompCtrl.company.email" required><br>
+            Password:<br>
+            <input type="password" ng-model="getCompCtrl.company.password" required><br>
+            <br>
+            <input type="submit" value="Update">  <span>{{getCompCtrl.editMessage}}</span>
+        </form>
+    </div>
+</div>

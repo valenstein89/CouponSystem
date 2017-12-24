@@ -1,0 +1,12 @@
+<div>
+        <form ng-submit="createCustCtrl.createCustomer()" style="margin-left:2%; margin-top:2%">
+            Customer Name:<br>
+            <input type="text" ng-model="createCustCtrl.customer.custName" required><br> 
+            Password:<br>
+            <input type="password" ng-model="createCustCtrl.customer.password" required><br>
+            <br>
+            <input type="submit" value="Create">
+            <br>
+            <span>{{createCustCtrl.message}}</span>
+        </form>
+    </div>  

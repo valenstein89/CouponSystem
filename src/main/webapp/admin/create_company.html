@@ -1,0 +1,14 @@
+<div>
+	<form ng-submit="createCompCtrl.createCompany()" style="margin-left:2%; margin-top:2%">
+		Company Name:<br>
+		<input type="text" ng-model="createCompCtrl.company.compName" required><br> 
+		Email:<br>
+		<input type="email" ng-model="createCompCtrl.company.email" required><br>
+		Password:<br>
+		<input type="password" ng-model="createCompCtrl.company.password" required><br>
+		<br>
+		<input type="submit" value="Create">
+        <br>
+        <span>{{createCompCtrl.message}}</span>
+	</form>
+</div>  
