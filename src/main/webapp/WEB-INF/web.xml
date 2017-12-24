@@ -5,7 +5,7 @@
     <filter>
     <display-name>LoginFilter</display-name>
     <filter-name>LoginFilter</filter-name>
-    <filter-class>JohnBryce.CouponSystemWebAPI.filters.LoginFilter</filter-class>
+    <filter-class>com.CouponSystemWebAPI.filters.LoginFilter</filter-class>
   </filter>
   <filter-mapping>
     <filter-name>LoginFilter</filter-name>
@@ -18,7 +18,7 @@
     <servlet-class>org.glassfish.jersey.servlet.ServletContainer</servlet-class>
     <init-param>
       <param-name>jersey.config.server.provider.packages</param-name>
-      <param-value>JohnBryce.CouponSystemWebAPI</param-value>
+      <param-value>com.CouponSystemWebAPI</param-value>
     </init-param>
     <load-on-startup>1</load-on-startup>
   </servlet>
@@ -30,7 +30,7 @@
     <description></description>
     <display-name>LoginServlet</display-name>
     <servlet-name>LoginServlet</servlet-name>
-    <servlet-class>JohnBryce.CouponSystemWebAPI.login.servlets.LoginServlet</servlet-class>
+    <servlet-class>com.CouponSystemWebAPI.login.servlets.LoginServlet</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>LoginServlet</servlet-name>
@@ -40,7 +40,7 @@
     <description></description>
     <display-name>LogoutServlet</display-name>
     <servlet-name>LogoutServlet</servlet-name>
-    <servlet-class>JohnBryce.CouponSystemWebAPI.login.servlets.LogoutServlet</servlet-class>
+    <servlet-class>com.CouponSystemWebAPI.login.servlets.LogoutServlet</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>LogoutServlet</servlet-name>
